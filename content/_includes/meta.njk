@@ -1,0 +1,19 @@
+{% set description = "" %}
+{% if meta.description %}
+    {% set description = meta.description | striptags | truncate(155)  %}
+{% else %}
+    {% set description = site.description %}
+{% endif %}
+
+<!-- Legacy meta -->
+<meta name="description" content="{{ description }}">
+
+<!--Schema-->
+<link rel="author" href="{{ site.url }}">
+<link rel="publisher" href="{{ site.url }}">
+<meta itemprop="name" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
+<meta itemprop="description" content="{{ description }}">
+
+<!--Twitter Card-->
+
+<!-- Facebook OpenGraph -->

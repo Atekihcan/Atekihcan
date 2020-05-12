@@ -1,0 +1,21 @@
+{% if post.data | length %}
+    {% set date = post.date %}
+    {% set category = post.data.category %}
+    {% set content = post.templateContent %}
+    {% set url = post.url | url %}
+{% endif %}
+
+<div class="entry-meta">
+    <span class="entry-meta-item">
+        <a href="/blog/{{ category | slug }}/" rel="category">{{ category }}</a>
+    </span>
+    <span class="entry-meta-item">
+        <time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time>
+    </span>
+    <span class="entry-meta-item">
+        {{ content | readingTime }}
+    </span>
+    <span class="entry-meta-item">
+        <a href="{{ url }}#disqus_thread">0 comment</a>
+    </span>
+</div>

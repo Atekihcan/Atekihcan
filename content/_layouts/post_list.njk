@@ -1,0 +1,29 @@
+---
+layout: base.njk
+pagination:
+  data: collections.post
+  size: 10
+  reverse: true
+  alias: posts
+---
+
+<div class="entry-list">
+    {% for post in posts %}
+        <article class="entry entry-snippet">
+            <header class="entry-header">
+                <h2 class="entry-title">
+                    <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+                </h2>
+                {% include 'post-meta.njk' %}
+            </header>
+            <div class="entry-content">
+                {{ post.templateContent | striptags(true) | truncate(255) }}
+            </div>
+
+            <a class="button" href="{{ post.url | url }}" aria-label="Read more on {{ post.data.title }}">Read more</a>
+        </article>
+        <hr class="fading"/>
+    {% endfor %}
+</div>
+
+{% include 'pagination.njk' %}

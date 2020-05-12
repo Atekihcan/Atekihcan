@@ -1,0 +1,38 @@
+{
+    "name": "atekihcan",
+    "version": "1.0.0",
+    "description": "Eleventy based personal website",
+    "main": "index.js",
+    "scripts": {
+        "build": "npx @11ty/eleventy",
+        "watch": "npx @11ty/eleventy --watch",
+        "serve": "npx @11ty/eleventy --serve",
+        "debug": "DEBUG=* npx @11ty/eleventy"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/Atekihcan/Atekihcan.git"
+    },
+    "keywords": [
+        "Nachiketa",
+        "Nachiketa Das",
+        "Atekihcan"
+    ],
+    "author": {
+        "name": "Nachiketa Das",
+        "email": "nachiketa.info@gmail.com",
+        "url": "https://atekihcan.com/"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Atekihcan/Atekihcan/issues"
+    },
+    "homepage": "https://github.com/Atekihcan/Atekihcan#readme",
+    "devDependencies": {
+        "@11ty/eleventy": "^0.10.0",
+        "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+        "markdown-it": "^10.0.0",
+        "markdown-it-anchor": "^5.2.7",
+        "moment": "^2.24.0"
+    }
+}
