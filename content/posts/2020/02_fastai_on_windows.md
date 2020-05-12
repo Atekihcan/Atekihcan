@@ -8,9 +8,31 @@ meta:
     description: "Setting up fastai to run on Windows 10 locally is not that difficult. This is a decent alternative to running it on the cloud as suggested for the course Practical Deep Learning for Coders"
 ---
 
-xxx [Intro of why and stuff]
+As I mentioned in the [first post]({% link '01_first_post' %}), I have recently started going through the {% link_out "fast.ai" "https://www.fast.ai/" %} course {% link_out "Practical Deep Learning for Coders" "https://course.fast.ai/index.html" %}. The course instructor {% link_out "Jeremy Howards" "https://en.wikipedia.org/wiki/Jeremy_Howard_(entrepreneur)" %}, highly recommends using a cloud GPU instance like AWS, GCP etc. to practice and train your networks.
 
-## Update Nvidia Drivers
+I followed the same instructions and setup everything on GCP (*Google Cloud Platform*). And actually finished the  first lecture on GCP. GCP provides you with $300 of free credit for the first year which is more than enough for the course. It's actually calculated roughly and shown {% link_out "here" "https://course.fast.ai/start_gcp.html#budget-compute" "GCP budget required for the fastai course" %}.
+
+### But that's not how I work
+
+But soon enough I realized that my schedule and work style is not suitable for such systems. I often drift to doing something else while watching a course video. Like playing a round of *Clash of Clans* or sneakily watching whatever my wife is binging on Netflix or just going down the rabbit hole of googling.
+
+Meanwhile the cloud VM instance keeps on running with per minute billing.
+
+There is enough free credit to cover that. But I might use it actually when I need it. Like doing really heavy processing or training.
+
+### Setting up Windows 10 for the course
+
+Also as Jeremy points out in the first lecture itself that deep learning is so easy to do now because reinforce learning. That is you do not need to train your network from scratch. You can take a pre-trained network meant for generic stuff and train it with your small sized niche data and call it a day. A cloud VM instance with high configuration might be a overkill for that.
+
+Especially when I have a decent workstation at home with Ryzen 5 1600 with 16 gigs of RAM and Nvidia GTX 1050Ti.
+
+I mean it is not even the 10th system configuration people will list out as a capable neural network work system, but it can do it's job in my case.
+
+So, I went ahead and started making my Windows 10 system ready for the course. There were some useful discussions on the topic on the course website, but none of it worked exactly for me.
+
+Here's what worked for me...
+
+### Update Nvidia Drivers
 
 Before starting to install anything, update your Nvidia drivers. And stick to Windows update for this instead of updating from the GeForce Experience program or downloading driver from Nvidia website. I had issues with last two every time. With Windows update you might not get latest drivers, but you'll have something stable that work well with Windows.
 
@@ -20,7 +42,7 @@ Restart.
 
 Open Windows update and check for updates if the drivers are not automatically installed while rebooting. Nvidia drivers update should be listed just follow standard Windows update procedure to  install those.
 
-## Install fastai Using Anaconda/Miniconda
+### Install fastai Using Anaconda/Miniconda
 
 Installing fastai environment using conda package management system will be the easiest way to do it. You can choose {% link_out "Anaconda" "https://www.anaconda.com/products/individual" %} (installs a relatively large number of packages) or {% link_out "Miniconda" "https://docs.conda.io/en/latest/miniconda.html" %} (smaller and minimal).
 
@@ -44,7 +66,7 @@ I went with Miniconda when I used conda environment. The steps are as follows:
 
 And that's all you can go on and start downloading course materials and running notebooks.
 
-## Install fastai Using Nothing but Pip
+### Install fastai Using Nothing but Pip
 
 I have never been very comfortable using conda environments. Possibly because I love to have granular control over what package I install and which one I skip.
 
@@ -78,7 +100,7 @@ Eventually I went onto uninstall Miniconda and everything related to it, and set
 
 * If you get errors like below, you might have selected a wrong combo. Confirm that you have **64 bit Python** installed.
 
-    ``` text//0-2
+    ``` text//0-1
     ERROR: Could not find a version that satisfies the requirement torch==1.5.0+cu101 (from versions: 0.1.2, 0.1.2.post1, 0.1.2.post2)
     ERROR: No matching distribution found for torch==1.5.0+cu101
 
@@ -89,7 +111,7 @@ Eventually I went onto uninstall Miniconda and everything related to it, and set
     ```bash
     pip install jupyterlab
 
-## Start Learning
+### Start Learning
 
 By now everything that is required to run the course notebooks should be installed and ready. You can confirm that by running
 
@@ -114,7 +136,7 @@ Let's go ahead and start the actual course notebooks.
 
 * That's all. You should now be able to run all fastai course notebooks locally in your Windows 10 machine without any issues.
 
-## How to check if torch is actually using GPU
+### How to check if torch is actually using GPU
 
 Launch a Jupyter notebook, and try running these short snippets to check how much time it is taking to run on CPU and how much GPU.
 

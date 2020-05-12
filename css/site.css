@@ -116,24 +116,24 @@ ol li {
     position: relative;
 }
 
-ul li::before,
 ol li::before {
     position: absolute;
-    top: 2px;
-    left: -25px;
-    width: 20px;
-    height: 20px;
-    content: counter(step-counter);
-    background-color: var(--primary-dark);
-    color: white;
-    border-radius: 12px;
-    font-size: 0.8rem;
+    left: -1.2rem;
+    font-weight: 700;
+    content: counter(step-counter)".";
     text-align: center;
-    line-height: 1.2rem;
+    color: var(--primary-dark);
 }
 
 ul li::before {
-    color: var(--primary-dark);
+    position: absolute;
+    top: 0.25rem;
+    left: -1.4rem;
+    width: 1rem;
+    height: 1rem;
+    content: "";
+    background-color: var(--primary-dark);
+    border-radius: 0.5rem;
 }
 
 
