@@ -12,19 +12,19 @@ As I mentioned in the [first post]({% link '01_first_post' %}), I have recently 
 
 I followed the same instructions and setup everything on GCP (*Google Cloud Platform*). And actually finished the  first lecture on GCP. GCP provides you with $300 of free credit for the first year which is more than enough for the course. It's actually calculated roughly and shown {% link_out "here" "https://course.fast.ai/start_gcp.html#budget-compute" "GCP budget required for the fastai course" %}.
 
-### But that's not how I work
+### Difficult to Work in Cloud All the Time
 
-But soon enough I realized that my schedule and work style is not suitable for such systems. I often drift to doing something else while watching a course video. Like playing a round of *Clash of Clans* or sneakily watching whatever my wife is binging on Netflix or just going down the rabbit hole of googling.
+But soon enough I realized that my schedule and work style is not suitable for such systems. I often drift to doing something else while watching a course video. Like playing a round of *Clash of Clans* or sneakily watching whatever my wife is binging on Netflix or just going down the rabbit hole of Googling.
 
 Meanwhile the cloud VM instance keeps on running with per minute billing.
 
-There is enough free credit to cover that. But I might use it actually when I need it. Like doing really heavy processing or training.
+There is enough free credit to cover that. But I'd like to use it when I actually need it.
 
 ### Setting up Windows 10 for the course
 
-Also as Jeremy points out in the first lecture itself that deep learning is so easy to do now because reinforce learning. That is you do not need to train your network from scratch. You can take a pre-trained network meant for generic stuff and train it with your small sized niche data and call it a day. A cloud VM instance with high configuration might be a overkill for that.
+Also as Jeremy points out in the first lecture itself that deep learning is so easy to do now because reinforcement learning. That is you do not need to train your network from scratch. You can take a pre-trained network meant for generic stuff and train it with your small sized niche data and call it a day. A cloud VM instance with crazy good configuration might not always be required for that.
 
-Especially when I have a decent workstation at home with Ryzen 5 1600 with 16 gigs of RAM and Nvidia GTX 1050Ti.
+Especially when I have a decent workstation at home with Ryzen 5 1600 with 16 gigs of RAM and Nvidia GTX 1050Ti (4GB).
 
 I mean it is not even the 10th system configuration people will list out as a capable neural network work system, but it can do it's job in my case.
 
@@ -74,7 +74,11 @@ Also it is a pain to always work from conda environment. It's good enough if you
 
 Anyway, soon after setting this environment, I wanted to use `mplfinance` package for some financial data analysis. To my surprise I could not install it as apparently it is not available in any conda channels. I can install it easily using `pip` but couldn't make that work under conda environment as well.
 
-Eventually I went onto uninstall Miniconda and everything related to it, and setup everything from scratch using just `pip`
+Eventually I uninstalled Miniconda and everything related to it, and setup everything from scratch using just `pip`
+
+So, here's how you do that...
+
+<div class="highlight-red">With this approach, you are likely to hit a snag or two from time to time, and you'll need to use fair amount of Googling to fix those. If you are not up  for it, stick to Conda environment based installations.</div>
 
 * Install Python. Duh! Installers available {% link_out "here" "https://www.python.org/downloads/release/python-382/" %}. *Note: You must install 64 bit version, otherwise there will be problem with installing `pytorch` later.*
 
@@ -106,9 +110,10 @@ Eventually I went onto uninstall Miniconda and everything related to it, and set
 
 * If you still cannot make it work, try downloading required wheel package from {% link_out "here" "https://download.pytorch.org/whl/torch_stable.html" "PyTorch Wheels" %}. But this should be your last resort.
 
-* Install `jupyter`
+* Install `fastai` and `jupyter`
 
     ```bash
+    pip install fastai
     pip install jupyterlab
 
 ### Start Learning
@@ -167,7 +172,9 @@ You should either get some error, which might mean something wrong with you inst
 99.7 µs ± 15.3 µs per loop (mean ± std. dev. of 7 runs, 1 loop each)
 ```
 
-That's almost 11.2k times faster! Definitely torch is using my GPU
+That's almost 11.2k times faster! Definitely torch is using my GPU.
+
+In comparison, my GCP instance with a Nvidia tesla T4 (16 GB) took 387 ms on CPU and 35.6 µs on GPU. However, note that this difference will be much larger with actual training times. For example, for lesson 1, cat-dog classification, my local machine took almost 10 minutes to fit one cycle, whereas the GCP instance was just shy of 2 minutes. And this will only increase with larger training data.
 
 If you are familiar with `pytorch`, by this point you might be thinking there are many other simpler ways to check if GPU is being used.
 

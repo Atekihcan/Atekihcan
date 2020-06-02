@@ -1,13 +1,14 @@
 :root {
     /* Color Schemes */
-    --primary-dark: #2b7a78;
-    --primary-light: #3aafa9;
-    --primary-lighter: #65ebe4;
+    --primary-dark: hsl(193, 100%, 30%);
+    --primary-light: hsl(193, 100%, 50%);
+    --primary-lighter: hsl(193, 70%, 60%);
     --main-text: #17252A;
     --light-text: #fff;
     /* Fonts */
     --head-font: 'Josefin Sans', Arial, sans-serif;
     --body-font: 'Poppins', Arial, sans-serif;
+    --mono-font: 'Courier New', Courier, monospace;
 }
 
 ::selection {
@@ -198,17 +199,29 @@ ul li::before {
 
 .site-logo {
     font-size: 2.5rem;
-    font-weight: 700;
     text-transform: lowercase;
 }
 
 .site-nav {
     display: flex;
     justify-content: center;
+    margin-top: 10px;
+}
+
+.site-nav-element {
+    font-family: var(--mono-font);
+}
+
+.site-nav-element::before {
+    content: "/";
+}
+
+.site-nav-element::after {
+    content: "/";
 }
 
 .site-nav a {
-    padding: 0px 20px;
+    padding: 0px 10px;
     text-transform: uppercase;
 }
 
@@ -219,11 +232,10 @@ ul li::before {
     height: 1.5px;
     background: var(--primary-light);
     transition: width .6s;
-    margin: 0px auto;
 }
 
 .site-nav a:hover::after {
-    width: 100%;
+    width: 90%;
 }
 
 
@@ -442,7 +454,350 @@ a[href].anchor-link:focus:visited,
 }
 
 
-/* Code */
+/* Highlight boxes */
+
+.highlight-red {
+    padding: 5px;
+    margin-bottom: 20px;
+    background-color: rgba(220, 20, 60, 0.2);
+    border: 2px dotted rgb(220, 20, 60);
+}
+
+.highlight-green {
+    padding: 5px;
+    margin-bottom: 20px;
+    background-color: rgba(60, 220, 20, 0.2);
+    border: 2px dotted green;
+}
+
+
+/* Logo animation */
+
+.site-logo span {
+    position: relative;
+    font-family: var(--mono-font);
+    letter-spacing: -0.42rem;
+    animation-delay: 3s;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.a2 {
+    animation-name: move_a2;
+}
+
+.t {
+    animation-name: move_t;
+}
+
+.e {
+    animation-name: move_e;
+}
+
+.k {
+    animation-name: move_k;
+}
+
+.i {
+    animation-name: move_i;
+}
+
+.h {
+    animation-name: move_h;
+}
+
+.c {
+    animation-name: move_c;
+}
+
+.a1 {
+    animation-name: move_a1;
+}
+
+.n {
+    animation-name: move_n;
+}
+
+@keyframes move_n {
+    00% {
+        left: 0px;
+        top: 0px;
+    }
+    01% {
+        left: 0px;
+        top: -30px;
+    }
+    02% {
+        left: -13.4rem;
+        top: -30px;
+    }
+    03% {
+        left: -13.4rem;
+        top: 0px;
+    }
+    50% {
+        left: -13.4rem;
+        top: 0px;
+    }
+    51% {
+        left: -13.4rem;
+        top: 30px;
+    }
+    52% {
+        left: 0px;
+        top: 30px;
+    }
+    53% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@keyframes move_a2 {
+    00% {
+        left: 0px;
+        top: 0px;
+    }
+    01% {
+        left: 0px;
+        top: 30px;
+    }
+    02% {
+        left: 13.4rem;
+        top: 30px;
+    }
+    03% {
+        left: 13.4rem;
+        top: 0px;
+    }
+    50% {
+        left: 13.4rem;
+        top: 0px;
+    }
+    51% {
+        left: 13.4rem;
+        top: -30px;
+    }
+    52% {
+        left: 0px;
+        top: -30px;
+    }
+    53% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@keyframes move_a1 {
+    03% {
+        left: 0px;
+        top: 0px;
+    }
+    04% {
+        left: 0px;
+        top: -30px;
+    }
+    05% {
+        left: -10rem;
+        top: -30px;
+    }
+    06% {
+        left: -10rem;
+        top: 0px;
+    }
+    53% {
+        left: -10rem;
+        top: 0px;
+    }
+    54% {
+        left: -10rem;
+        top: 30px;
+    }
+    55% {
+        left: 0px;
+        top: 30px;
+    }
+    56% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@keyframes move_t {
+    03% {
+        left: 0px;
+        top: 0px;
+    }
+    04% {
+        left: 0px;
+        top: 30px;
+    }
+    05% {
+        left: 10rem;
+        top: 30px;
+    }
+    06% {
+        left: 10rem;
+        top: 0px;
+    }
+    53% {
+        left: 10rem;
+        top: 0px;
+    }
+    54% {
+        left: 10rem;
+        top: -30px;
+    }
+    55% {
+        left: 0px;
+        top: -30px;
+    }
+    56% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@keyframes move_c {
+    06% {
+        left: 0px;
+        top: 0px;
+    }
+    07% {
+        left: 0px;
+        top: -30px;
+    }
+    08% {
+        left: -6.6rem;
+        top: -30px;
+    }
+    09% {
+        left: -6.6rem;
+        top: 0px;
+    }
+    56% {
+        left: -6.6rem;
+        top: 0px;
+    }
+    57% {
+        left: -6.6rem;
+        top: 30px;
+    }
+    58% {
+        left: 0px;
+        top: 30px;
+    }
+    59% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@keyframes move_e {
+    06% {
+        left: 0px;
+        top: 0px;
+    }
+    07% {
+        left: 0px;
+        top: 30px;
+    }
+    08% {
+        left: 6.6rem;
+        top: 30px;
+    }
+    09% {
+        left: 6.6rem;
+        top: 0px;
+    }
+    56% {
+        left: 6.6rem;
+        top: 0px;
+    }
+    57% {
+        left: 6.6rem;
+        top: -30px;
+    }
+    58% {
+        left: 0px;
+        top: -30px;
+    }
+    59% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@keyframes move_h {
+    09% {
+        left: 0px;
+        top: 0px;
+    }
+    10% {
+        left: 0px;
+        top: -30px;
+    }
+    11% {
+        left: -3.2rem;
+        top: -30px;
+    }
+    12% {
+        left: -3.2rem;
+        top: 0px;
+    }
+    59% {
+        left: -3.2rem;
+        top: 0px;
+    }
+    60% {
+        left: -3.2rem;
+        top: 30px;
+    }
+    61% {
+        left: 0px;
+        top: 30px;
+    }
+    62% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@keyframes move_k {
+    09% {
+        left: 0px;
+        top: 0px;
+    }
+    10% {
+        left: 0px;
+        top: 30px;
+    }
+    11% {
+        left: 3.2rem;
+        top: 30px;
+    }
+    12% {
+        left: 3.2rem;
+        top: 0px;
+    }
+    59% {
+        left: 3.2rem;
+        top: 0px;
+    }
+    60% {
+        left: 3.2rem;
+        top: -30px;
+    }
+    61% {
+        left: 0px;
+        top: -30px;
+    }
+    62% {
+        left: 0px;
+        top: 0px;
+    }
+}
 
 
 /* Extra small devices (phones, 600px and down) */

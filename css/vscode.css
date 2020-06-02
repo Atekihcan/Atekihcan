@@ -1,5 +1,5 @@
 :not(pre)>code {
-    background-color: #b3d4fc;
+    background-color: hsl(193, 70%, 90%);
     border-radius: 5px;
     padding: 2px 5px;
 }

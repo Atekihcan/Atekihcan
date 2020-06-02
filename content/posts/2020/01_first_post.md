@@ -14,7 +14,7 @@ Even today, after I started writing, I realized that I have not yet configured S
 
 Half an hour later, after supporting the very basic SEO stuffs, I let that go and pushed it to backlog and resumed writing. And here we are.
 
-{% image "https://imgs.xkcd.com/comics/the_general_problem.png" "The General Problem by xkcd" "The General Problem by xkcd" "https://xkcd.com/974/" %}
+{% image "https://imgs.xkcd.com/comics/the_general_problem.png" "The General Problem by xkcd" "https://xkcd.com/974/" "The General Problem by xkcd" %}
 
 ### Why blog at all
 
