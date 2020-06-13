@@ -141,6 +141,7 @@ ul li::before {
 /* Top level elements */
 
 .site-body {
+    width: 100%;
     display: grid;
     grid-auto-columns: 1fr;
     grid-template-areas: 'site-header' 'site-main' 'site-aside' 'site-footer';
@@ -160,7 +161,6 @@ ul li::before {
     grid-area: site-main;
     padding: 0px 20px;
     margin: 0px auto;
-    width: 100%;
 }
 
 .site-aside {
@@ -242,6 +242,7 @@ ul li::before {
 /* Post Full */
 
 .entry {
+    width: 100%;
     position: relative;
     z-index: 0;
 }
@@ -281,6 +282,9 @@ ul li::before {
 
 .entry-content {
     margin: 20px auto;
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .entry-content h2 {
@@ -457,17 +461,20 @@ a[href].anchor-link:focus:visited,
 /* Highlight boxes */
 
 .highlight-red {
-    padding: 5px;
+    padding: 15px;
     margin-bottom: 20px;
     background-color: rgba(220, 20, 60, 0.2);
     border: 2px dotted rgb(220, 20, 60);
+    border-radius: 5px;
 }
 
 .highlight-green {
-    padding: 5px;
+    padding: 15px;
     margin-bottom: 20px;
     background-color: rgba(60, 220, 20, 0.2);
     border: 2px dotted green;
+    border-radius: 5px;
+    position: relative;
 }
 
 

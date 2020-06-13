@@ -62,6 +62,11 @@ module.exports = function(eleventyConfig) {
         return '<a href="' + link + '" title="' + (title != undefined ? title : text) + '" target="_blank" rel="noopener">' + text + '</a>';
     });
 
+    // Short code for code
+    eleventyConfig.addShortcode("code", function(text) {
+        return '<code>' + text + '</code>';
+    });
+
     // Short code for rendering an image with caption
     eleventyConfig.addShortcode("image", function(src, alt, link, title) {
         let html = '<figure>';
