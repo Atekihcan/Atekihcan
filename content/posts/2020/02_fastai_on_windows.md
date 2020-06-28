@@ -91,11 +91,11 @@ So, here's how you do that...
     python -m pip install --upgrade pip setuptools wheel
 
 * Identify your CUDA version. This is required to install proper version of `pytorch`. To do this go to Nvidia settings from you system tray icons. And click on *System Information*.
-{% image "/images/2020/2_nvidia_cuda_version_nv_settings.jpg" "Screenshot of Nvidia settings" %}
+{% image "/images/2020/02_nvidia_cuda_version_nv_settings.jpg" "Screenshot of Nvidia settings" %}
 
 * Note your CUDA version. As shown in the screenshot below, it is 10.1 for me.
 
-{% image "/images/2020/2_nvidia_cuda_version_nv_sysinfo.jpg" "Screenshot of Nvidia settings system information" %}
+{% image "/images/2020/02_nvidia_cuda_version_nv_sysinfo.jpg" "Screenshot of Nvidia settings system information" %}
 
 * Install `pytorch` by selecting your system details and configurations {% link_out "here" "https://pytorch.org/get-started/locally/" "PyTorch installation instructions" %}. The command should look something like this...
 

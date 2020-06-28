@@ -85,7 +85,7 @@ logger.d('debug log 2') # Will log as level is changed to debug
 
 And this will result in the following output in Jupyter notebook
 
-{% image "/images/2020/4_python_log_output_1.jpg" "Output of basic logging" %}
+{% image "/images/2020/04_python_log_output_1.jpg" "Output of basic logging" %}
 
 As you can see, you can change the log level any time. But note that although the second debug log is supposed to appear after the error log, it was printed before. The reason being the stream is not flushed by default. You can enforce that by setting up `Log` with flushing enabled as follows
 
@@ -101,7 +101,7 @@ logger2.d('debug log 2') # Will log as level is changed to debug
 
 And the order is restored!
 
-{% image "/images/2020/4_python_log_output_2.jpg" "Output of basic logging with flushing enabled" %}
+{% image "/images/2020/04_python_log_output_2.jpg" "Output of basic logging with flushing enabled" %}
 
 ### Further Extensions
 
