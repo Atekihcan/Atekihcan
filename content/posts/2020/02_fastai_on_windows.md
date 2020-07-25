@@ -3,7 +3,7 @@ layout: post.njk
 title: How to setup fastai on Windows 10
 date: 2020-04-26T09:43:51+0530
 tags: ['post']
-category: DL
+category: dl
 meta:
     description: "Setting up fastai to run on Windows 10 locally is not that difficult. This is a decent alternative to running it on the cloud as suggested for the course Practical Deep Learning for Coders"
 ---

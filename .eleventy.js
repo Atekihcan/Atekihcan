@@ -89,10 +89,10 @@ module.exports = function(eleventyConfig) {
     });
 
     // Creating category collections
-    ["code", "random", "dl", "graphics", "trading", "null"].forEach(function(cat) {
+    ["code", "random", "dl", "graphics", "trading", "blender"].forEach(function(cat) {
         eleventyConfig.addCollection(cat, function(collection) {
             return collection.getAll().filter(function(item) {
-                return (item.data.category != undefined) && (item.data.category.toUpperCase() === cat.toUpperCase());
+                return (item.data.category != undefined) && (item.data.category.toUpperCase().includes(cat.toUpperCase()));
             });
         });
     });

@@ -3,7 +3,7 @@ layout: post.njk
 title: 'SVN Checkout Error [svn: E120106: ra_serf:]'
 date: 2020-04-28T21:56:51+0530
 tags: ['post']
-category: Random
+category: random
 meta:
     description: "How to fix annoying SVN E120106 error 'ra_serf: The server sent a truncated HTTP response body' during SVN checkout"
 ---

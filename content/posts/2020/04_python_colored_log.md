@@ -3,7 +3,7 @@ layout: post.njk
 title: 'Colored Logging in Python'
 date: 2020-04-30T09:56:51+0530
 tags: ['post']
-category: Code
+category: code
 meta:
     description: "How to produce beautifully formatted colored logs in python with dynamically changing logging level"
 ---

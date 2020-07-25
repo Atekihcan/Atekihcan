@@ -3,7 +3,7 @@ layout: post.njk
 title: 'A Super Helpful Shortcut to Add and Commit to Git at the Same Time'
 date: 2020-05-02T09:56:51+0530
 tags: ['post']
-category: Code
+category: random
 meta:
     description: "Using the power of Git aliases to add and commit changes at the same time and streamlining the Git workflow"
 ---

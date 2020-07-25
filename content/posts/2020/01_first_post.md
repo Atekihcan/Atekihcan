@@ -3,7 +3,7 @@ layout: post.njk
 title: Finally, The First Post
 date: 2020-04-24T10:03:51+0530
 tags: ['post']
-category: Random
+category: random
 meta:
     description: "Usual story of procrastinating and shifting focus do something else instead of actually writing the first post of the blog"
 ---

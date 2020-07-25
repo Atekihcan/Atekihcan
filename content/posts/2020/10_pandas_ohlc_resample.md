@@ -3,7 +3,7 @@ layout: post.njk
 title: 'Changing Timeframe of OHLC Candlestick Data in Pandas'
 date: 2020-06-20T09:56:51+0530
 tags: ['post']
-category: Code
+category: code|trading
 meta:
     description: "How to easily calculate larger timeframe data like 5 minutes or 1 hour, given OHLC candlestick data for a stock in lower timeframe like 1 minute using Python Pandas DataFrame"
 ---
@@ -32,9 +32,11 @@ As my data is already stored nicely in `CSV` format, the dataframe looks like be
 
 Now, I want to resample it to 5 minute data, which should have opening price same as first 1 minute candle, high price as maximum of five candles, low price as minimum of five candles, *close* as close of fifth candle, and volume data as sum of the five candles.
 
-Naive approach would have been to loop over the DataFrame and calculate these, But luckily for us, Pandas already has {% link_out  "an API" "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.resample.html" %} to do this: `resample`.
+Naive approach would have been to loop over the DataFrame and calculate these, But luckily for us, Pandas already has {% link_out "an API" "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.resample.html" %} to do this: `resample`.
 
 Here's how to use this in this instance...
+
+Note: `base=15` is not really needed for 5 minute sampling, but it'll be required if you want to maintain 9:15 AM as the starting point even when you are sampling for 30 minute or 1 hour data. Without this, the sampled data will start from 9:00 AM.
 
 ```python
 ohlc = {
@@ -45,7 +47,7 @@ ohlc = {
     'volume': 'sum'
 }
 
-df = data.resample('5T').apply(ohlc)
+df = data.resample('5min', base=15).apply(ohlc)
 df.head()
 ```
 

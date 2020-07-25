@@ -5,9 +5,14 @@
     {% set url = post.url | url %}
 {% endif %}
 
+{% set categories = category.split("|") %}
+
 <div class="entry-meta">
     <span class="entry-meta-item">
-        <a href="/blog/{{ category | slug }}/" rel="category">{{ category }}</a>
+        {% for cat in categories %}
+            <a href="/blog/{{ cat | slug }}/" rel="category">{{ cat }}</a>
+            {% if not loop.last %}/{% endif %}
+        {% endfor %}
     </span>
     <span class="entry-meta-item">
         <time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time>
