@@ -41,7 +41,7 @@ E: Failed to fetch store:/var/lib/apt/lists/partial/security.ubuntu.com_ubuntu_d
 E: Some index files failed to download. They have been ignored, or old ones used instead.
 ```
 
-### Obvious Google Searchs
+### Obvious Google Searches
 
 A quick search gave a lot of forum posts which unanimously suggested to disable Windows Sandbox/Hyper-V. Which in turn meant disable WSL2.
 
