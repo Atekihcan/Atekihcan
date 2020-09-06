@@ -25,7 +25,20 @@ However, soon I came across an annoying problem which made it seem completely un
 And `update` spewed out a lot of error like below, and failed repeatedly.
 
 ```bash
-xxx
+E: Failed to fetch store:/var/lib/apt/lists/partial/security.ubuntu.com_ubuntu_dists_focal-security_main_binary-amd64_Packages.xz  Hash Sum mismatch
+   Hashes of expected file:
+    - Filesize:1127835 [weak]
+    - SHA256:eb5be3e6e8cf76c9ecbb8bd20b12444aee0e5d97a00590dd9f20f0c21414c719
+    - SHA1:d071e0470bbdb3a4a287af56b1c38ab54e7838d7 [weak]
+    - MD5Sum:d3e7a21e4040fe14f102a135917a9563 [weak]
+   Hashes of received file:
+    - SHA256:48823e7058acaf53e9c63c76af5adc46144291b2ae7ed83d5bdfed79339748f2
+    - SHA1:fbb4eab18ca75cc4671db7ff70058c73e51f7a30 [weak]
+    - MD5Sum:d3e7a21e4040fe14f102a135917a9563 [weak]
+    - Filesize:1127835 [weak]
+   Last modification reported: Thu, 03 Sep 2020 19:01:17 +0000
+   Release file created at: Sun, 06 Sep 2020 09:30:08 +0000
+E: Some index files failed to download. They have been ignored, or old ones used instead.
 ```
 
 ### Obvious Google Searchs
