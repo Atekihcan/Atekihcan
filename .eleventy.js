@@ -100,6 +100,7 @@ module.exports = function(eleventyConfig) {
     // Folders to copy to output folder
     eleventyConfig.addPassthroughCopy("css");
     eleventyConfig.addPassthroughCopy("images");
+    eleventyConfig.addPassthroughCopy("ads.txt");
 
     /* Markdown Overrides */
     let markdownLibrary = markdownIt({

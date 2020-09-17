@@ -23,6 +23,10 @@ pagination:
             <a class="button" href="{{ post.url | url }}" aria-label="Read more on {{ post.data.title }}">Read more</a>
         </article>
         <hr class="fading"/>
+        {% if loop.index % 4 == 0 %}
+            {% include 'ad_horizontal.njk' %}
+        <hr class="fading"/>
+        {% endif %}
     {% endfor %}
 </div>
 
