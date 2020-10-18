@@ -38,6 +38,31 @@ $ gpg --import key_private.asc
 $ gpg --import key_public.asc
 ```
 
+After it is done, you'll also need to trust the keys to use it without any issues.
+
+Type the following command in git bash (or bash if you are in Unix environment)...
+
+```bash
+$ gpg --edit-key 14CD2ADD54953E3C
+```
+
+In the `gpg` prompt that you'll get, execute the following command and select a trust level.
+
+```bash
+gpg> trust
+
+...
+
+  1 = I don't know or won't say
+  2 = I do NOT trust
+  3 = I trust marginally
+  4 = I trust fully
+  5 = I trust ultimately
+  m = back to the main menu
+```
+
+### Configure Git to Use the Key
+
 And then follow the same procedure to add the key to your local Git configuration and commit with `-S` flag. Git will automatically sign your commits with the same key.
 
 To make it more seamless, you can change the custom `add-commit` command I had mentioned in [an earlier post]({% link '05_git_alias_add_commit' %}) to include the `-S` flag as well.
