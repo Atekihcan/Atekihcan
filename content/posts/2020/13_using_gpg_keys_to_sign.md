@@ -78,3 +78,4 @@ Also, if you are working from a command line only interface, add the following t
 ```bash
 export GPG_TTY=$(tty)
 ```
+
