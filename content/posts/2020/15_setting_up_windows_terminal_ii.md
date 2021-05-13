@@ -14,25 +14,25 @@ meta:
 
 #### Install Scoop
 
-```psh
+```powershell
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 ```
 
 Or use the shorter version
 
-```psh
+```powershell
 iwr -useb get.scoop.sh | iex
 ```
 
 Note: if you get an error you might need to change the execution policy (i.e. enable Powershell) with
 
-```psh
+```powershell
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 ```
 
 #### Install Starship using Scoop
 
-```psh
+```powershell
 scoop install starship
 ```
 
@@ -40,7 +40,7 @@ scoop install starship
 
 Add following lines in your PowerShell profile configuration file
 
-```psh
+```powershell
 Invoke-Expression (&starship init powershell)
 ```
 
