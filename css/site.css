@@ -463,6 +463,11 @@ a[href].anchor-link:focus:visited,
   position: relative;
 }
 
+/* Utility Classes */
+.center {
+  text-align: center;
+}
+
 /* Logo animation */
 
 .site-logo span {
