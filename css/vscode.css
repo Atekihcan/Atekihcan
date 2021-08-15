@@ -23,7 +23,6 @@ code[class*="language-"] {
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-    border-radius: 5px;
 }
 
 pre[class*="language-"]::selection,
@@ -45,6 +44,7 @@ pre[class*="language-"] {
     overflow: auto;
     background: #1e1e1e;
     position: relative;
+    border-left: 6px #007899 solid;
 }
 
 @media only screen and (min-width: 992px) {

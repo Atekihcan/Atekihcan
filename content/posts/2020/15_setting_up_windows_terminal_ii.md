@@ -5,14 +5,16 @@ date: 2020-09-13T17:47:51+0530
 tags: ['post']
 category: random
 meta:
-
-    description: "A short guide on how to setup Windows Terminal and customize it with oh-my-posh and terminal icons"
-
+    description: "A short guide on how to setup Windows Terminal and customize it with starship"
 ---
 
-### Windows
+In the [previous article]({% link '14_setting_up_windows_terminal' %}), I had talked about customizing Windows Terminal as well as VS Code integrated terminal using {% link_out "Oh My Posh" "https://ohmyposh.dev/" %} and {% link_out "Terminal Icons" "https://github.com/devblackops/Terminal-Icons" %}. However, I have found **Oh My Posh** to be very slow at times and may be somewhat fancier than I'd like.
 
-#### Install Scoop
+After searching for some more options for customizations, I stumbled on {% link_out "Starship" "https://starship.rs/" %}. It's fast, minimal, and highly customizable.
+
+### Install for Windows
+
+You'll need {% link_out "Scoop" "https://scoop.sh/" %} to install Starship for Windows. You can install Scoop with following commands:
 
 ```powershell
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
@@ -30,29 +32,33 @@ Note: if you get an error you might need to change the execution policy (i.e. en
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 ```
 
-#### Install Starship using Scoop
+Finally install Starship using Scoop:
 
 ```powershell
 scoop install starship
 ```
 
-#### Add to PowerShell Profile
-
-Add following lines in your PowerShell profile configuration file
+And add following lines in your PowerShell profile configuration file to activate Starship.
 
 ```powershell
 Invoke-Expression (&starship init powershell)
 ```
 
-### Linux/WSL
+<div class="highlight-green">You can find PowerShell configuration in <code>$HOME\Documents\PowerShell\</code>. You can simply start the profile configuration file for editing in VS Code from terminal with the below command
 
-#### Install Starship using Prebuilt Binary
+```powershell
+code .$PROFILE
+```
+
+</div>
+
+### Install for Linux/WSL
+
+Use below command to install Starship using prebuilt binaries:
 
 ```bash
 curl -fsSL https://starship.rs/install.sh | bash
 ```
-
-#### Add to Bash Profile
 
 Add following to your `.bashrc` file
 
@@ -60,7 +66,13 @@ Add following to your `.bashrc` file
 eval "$(starship init bash)"
 ```
 
-### Theme
+### Custom Theme
+
+Starship can be customized as you wish using a TOML configuration file. Details on how to customize each module can  be found in the {% link_out "official documentation" "https://starship.rs/config/" %}.
+
+The configuration file must be stored in `$HOME\.config\starship.toml` for Windows and in `~/.config/starship.toml` for Linux.
+
+I have been using the following configuration:
 
 ```toml
 # Don't print a new line at the start of the prompt
@@ -83,11 +95,11 @@ format = "took [$duration](bold yellow)"
 # Local Time
 [time]
 disabled = false
-format = '[\[$time\]](#00ADEF)'
+format = '[\[$time\]](#E95420)'
 time_format = "%T"
 
 [directory]
-format = '[ $path ](#00ADEF)'
+format = '[ $path ](#E95420)'
 
 # Git Stuff
 [git_branch]
@@ -98,15 +110,17 @@ truncation_symbol = ""
 format = '( [$all_status$ahead_behind]($style))'
 style = ""
 untracked = "[?$count](#FF8C00) "
-stashed = "$"
+stashed = "[X$count](red) "
 modified = "[M$count](#DC143C) "
-staged = "[$count](green) "
+staged = "[+$count](green) "
 renamed = "[~$count](#FFD700) "
-deleted = "[X$count](#8B0000) "
+deleted = "[-$count](red) "
 
 [env_var]
 variable = "SHELL"
 default = "unknown shell"
 ```
 
-Ubuntu orange: #E95420
+Which results in following prompt:
+
+{% image "/images/2021/15_starship_custom_prompt.jpeg" "Starship Custom Prompt" "" "" %}

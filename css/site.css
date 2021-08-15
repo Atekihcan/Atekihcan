@@ -448,19 +448,14 @@ a[href].anchor-link:focus:visited,
 
 .highlight-red {
   padding: 15px;
-  margin-bottom: 20px;
+  margin: 20px auto;
   background-color: rgba(220, 20, 60, 0.2);
-  border: 2px dotted rgb(220, 20, 60);
-  border-radius: 5px;
 }
 
 .highlight-green {
   padding: 15px;
-  margin-bottom: 20px;
+  margin: 20px auto;
   background-color: rgba(60, 220, 20, 0.2);
-  border: 2px dotted green;
-  border-radius: 5px;
-  position: relative;
 }
 
 /* Utility Classes */
