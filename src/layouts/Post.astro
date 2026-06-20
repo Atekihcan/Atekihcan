@@ -1,0 +1,103 @@
+---
+import Base from './Base.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  date: Date;
+  categories: string[];
+}
+
+const { title, description, date, categories } = Astro.props;
+
+const formatted = date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const readingTime = (html: string) => {
+  const text = html.replace(/<[^>]*>/g, '');
+  const words = text.split(/\s+/).length;
+  return Math.ceil(words / 200);
+};
+---
+
+<Base title={title} description={description}>
+  <article>
+    <header class="post-header">
+      <h1 class="post-title">{title}</h1>
+      <div class="post-meta">
+        <time datetime={date.toISOString()}>{formatted}</time>
+        <span class="sep">&middot;</span>
+        {categories.map((cat) => (
+          <a href={`/blog/${cat}/`} class="category">{cat}</a>
+        ))}
+      </div>
+    </header>
+    <div class="post-content">
+      <slot />
+    </div>
+  </article>
+  <hr />
+  <div id="giscus-container">
+    <script
+      src="https://giscus.app/client.js"
+      data-repo="Atekihcan/Atekihcan"
+      data-repo-id=""
+      data-category="Blog Comments"
+      data-category-id=""
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      crossorigin="anonymous"
+      async
+    ></script>
+  </div>
+</Base>
+
+<style>
+  .post-header {
+    margin-bottom: 2rem;
+  }
+
+  .post-title {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .post-meta {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  .sep {
+    margin: 0 0.4rem;
+  }
+
+  .category {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: var(--bg-code);
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+    margin-left: 0.2rem;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background: var(--border);
+    margin: 3rem 0 2rem;
+  }
+
+  #giscus-container {
+    margin-top: 1rem;
+  }
+</style>

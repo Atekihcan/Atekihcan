@@ -1,36 +1,40 @@
 # Atekihcan
 
-Eleventy based personal website
+Personal website — [atekihcan.com](https://atekihcan.com)
 
-## Prerequisites
+Built with [Astro](https://astro.build/).
 
-### Node
+## Setup
 
-* Install Node
+```bash
+npm install
+npm run dev
+```
 
-    ```bash
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-    nvm install node --lts
-    ```
+## Deploy
 
-* Confirm Node version > 8 and install node modules
+Deploys automatically to GitHub Pages on push to `master` via GitHub Actions.
 
-    ```bash
-    node --version
-    npm install
-    ```
+## Writing Posts
 
-### Firebase
+Add markdown files to `src/content/posts/`. Frontmatter format:
 
-* Install firebase cli
+```yaml
+---
+title: Post Title
+description: Optional summary
+date: 2026-06-20
+categories:
+  - code
+---
+```
 
-    ```bash
-    npm install -g firebase-tools
-    ```
+Use `.mdx` extension for posts that need JSX components. KaTeX math works in both:
 
-* Login and initialize hosting project
-
-    ```bash
-    firebase login
-    firebase init hosting
-    ```
+```tex
+Inline: $E = mc^2$
+Block:
+$$
+\text{AI} = \frac{\text{FLOPs}}{\text{Bandwidth}}
+$$
+```
