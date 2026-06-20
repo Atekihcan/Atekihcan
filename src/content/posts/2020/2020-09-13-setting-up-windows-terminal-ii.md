@@ -7,7 +7,7 @@ categories:
 ---
 
 
-In the [previous article](/blog/random/setting-up-windows-terminal/), I had talked about customizing Windows Terminal as well as VS Code integrated terminal using [Oh My Posh](https://ohmyposh.dev/) and [Terminal Icons](https://github.com/devblackops/Terminal-Icons). However, I have found **Oh My Posh** to be very slow at times and may be somewhat fancier than I'd like.
+In the [previous article](/post:setting-up-windows-terminal), I had talked about customizing Windows Terminal as well as VS Code integrated terminal using [Oh My Posh](https://ohmyposh.dev/) and [Terminal Icons](https://github.com/devblackops/Terminal-Icons). However, I have found **Oh My Posh** to be very slow at times and may be somewhat fancier than I'd like.
 
 After searching for some more options for customizations, I stumbled on [Starship](https://starship.rs/). It's fast, minimal, and highly customizable.
 

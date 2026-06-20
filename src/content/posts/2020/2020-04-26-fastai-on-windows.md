@@ -7,7 +7,7 @@ categories:
 ---
 
 
-As I mentioned in the [first post](/blog/random/first-post/), I have recently started going through the [fast.ai](https://www.fast.ai/) course [Practical Deep Learning for Coders](https://course.fast.ai/index.html). The course instructor [Jeremy Howards](https://en.wikipedia.org/wiki/Jeremy_Howard_(entrepreneur)), highly recommends using a cloud GPU instance like AWS, GCP etc. to practice and train your networks.
+As I mentioned in the [first post](/post:first-post), I have recently started going through the [fast.ai](https://www.fast.ai/) course [Practical Deep Learning for Coders](https://course.fast.ai/index.html). The course instructor [Jeremy Howards](https://en.wikipedia.org/wiki/Jeremy_Howard_(entrepreneur)), highly recommends using a cloud GPU instance like AWS, GCP etc. to practice and train your networks.
 
 I followed the same instructions and setup everything on GCP (*Google Cloud Platform*). And actually finished the  first lecture on GCP. GCP provides you with $300 of free credit for the first year which is more than enough for the course. It's actually calculated roughly and shown [here](https://course.fast.ai/start_gcp.html#budget-compute "GCP budget required for the fastai course").
 

@@ -7,7 +7,7 @@ categories:
 ---
 
 
-As I had mentioned in the [previous post](/blog/random/hash-sum-mismatch-ubuntu-virtualbox/), I have been working on setting up a Linux VM to test my upcoming OpenGL tutorial series. As part of that, I  was trying to setup CMake on the VM, so that I can sort out cross platform builds.
+As I had mentioned in the [previous post](/post:hash-sum-mismatch-ubuntu-virtualbox), I have been working on setting up a Linux VM to test my upcoming OpenGL tutorial series. As part of that, I  was trying to setup CMake on the VM, so that I can sort out cross platform builds.
 
 However, default CMake version available in Ubuntu repository was 3.10.2 and I needed at least 3.15 to fully utilize some of the latest features.
 

@@ -6,7 +6,7 @@ categories:
   - random
 ---
 
-Since my [last post on GPG signing](/blog/random/using-gpg-keys-to-sign/), I have moved to MacBook and was wondering if I could setup to use Apple TouchID to do the signing instead. And turns out I can.
+Since my [last post on GPG signing](/post:using-gpg-keys-to-sign), I have moved to MacBook and was wondering if I could setup to use Apple TouchID to do the signing instead. And turns out I can.
 
 ### Install pinentry-mac
 

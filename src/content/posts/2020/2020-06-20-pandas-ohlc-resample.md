@@ -8,7 +8,7 @@ categories:
 ---
 
 
-I had mentioned in a [previous post](/blog/code/python-colored-log/), that I'm working on a Python module for downloading historical stock data *for free* using my broker's web APIs. The module is finished now, and right now I'm working on setting up a module for [algorithmic trading](https://www.investopedia.com/articles/active-trading/101014/basics-algorithmic-trading-concepts-and-examples.asp) using the same data.
+I had mentioned in a [previous post](/post:python-colored-log), that I'm working on a Python module for downloading historical stock data *for free* using my broker's web APIs. The module is finished now, and right now I'm working on setting up a module for [algorithmic trading](https://www.investopedia.com/articles/active-trading/101014/basics-algorithmic-trading-concepts-and-examples.asp) using the same data.
 
 The idea is to run a strategy that can do some analysis on the historical data and emit a signal like `BUY`, `SELL`, or `HOLD`.
 

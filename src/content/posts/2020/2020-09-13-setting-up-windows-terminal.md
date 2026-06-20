@@ -11,7 +11,7 @@ If you are using any sort of command line interface while in Windows, check out 
 
 ![Windows Terminal](/images/2021/14_windows_terminal.jpeg)
 
-In this article and the [next](/blog/random/setting-up-windows-terminal-ii/), I'll list down some customizations that I like and would want to explore more.
+In this article and the [next](/post:setting-up-windows-terminal-ii), I'll list down some customizations that I like and would want to explore more.
 
 ### oh-my-posh
 

@@ -64,7 +64,7 @@ gpg> trust
 
 And then follow the same procedure to add the key to your local Git configuration and commit with `-S` flag. Git will automatically sign your commits with the same key.
 
-To make it more seamless, you can change the custom `add-commit` command I had mentioned in [an earlier post](/blog/random/git-alias-add-commit/) to include the `-S` flag as well.
+To make it more seamless, you can change the custom `add-commit` command I had mentioned in [an earlier post](/post:git-alias-add-commit) to include the `-S` flag as well.
 
 Another way to sign all commits,is to configure your Git environment as follows
 
