@@ -61,13 +61,13 @@ const allCategories = [...new Set(posts.flatMap((p) => p.data.categories))].sort
     letter-spacing: 0.5px;
     padding: 0.25rem 0.75rem;
     border-radius: 3px;
-    background: var(--bg-code);
+    background: var(--bg-secondary);
     color: var(--text-muted);
   }
 
   .categories a.active,
   .categories a:hover {
-    background: var(--primary);
+    background: var(--accent);
     color: #fff;
     text-decoration: none;
   }
@@ -89,7 +89,7 @@ const allCategories = [...new Set(posts.flatMap((p) => p.data.categories))].sort
 
   .post-list a:hover {
     text-decoration: none;
-    color: var(--primary);
+    color: var(--accent);
   }
 
   .post-title {

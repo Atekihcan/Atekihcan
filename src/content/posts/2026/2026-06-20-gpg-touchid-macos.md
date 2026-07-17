@@ -36,7 +36,7 @@ When prompted, choose:
 - **Key type**: ECC (sign only) or RSA 4096, depending on your preference
 - **Expiry**: up to you, 1 year is reasonable. I just go with perpetual.
 - **Name and email**: use the same email as your GitHub account
-- **Passphrase**: set a strong one — you won't need to type it often thanks to Touch ID
+- **Passphrase**: set a strong one. You won't need to type it often thanks to Touch ID
 
 ### Get your key ID
 
@@ -70,6 +70,6 @@ Copy the entire output (including the `-----BEGIN PGP PUBLIC KEY BLOCK-----` and
 echo "test" | gpg --clearsign
 ```
 
-The first time, `pinentry-mac` will pop up asking for your passphrase. Check **"Save in Keychain"** and hit OK. From that point on, it authenticates via Touch ID — no passphrase typing.
+The first time, `pinentry-mac` will pop up asking for your passphrase. Check **"Save in Keychain"** and hit OK. From that point on, it authenticates via Touch ID. No more passphrase typing.
 
 Your commits will now show as **Verified** on GitHub.
